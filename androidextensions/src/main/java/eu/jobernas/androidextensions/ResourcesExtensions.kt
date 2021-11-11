@@ -1,4 +1,4 @@
-package eu.jobernas.extensions
+package eu.jobernas.androidextensions
 
 import android.content.Context
 import android.graphics.Color
