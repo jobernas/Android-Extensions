@@ -1,4 +1,4 @@
-package eu.jobernas.extensions
+package eu.jobernas.androidextensions
 
 import kotlin.math.floor
 
