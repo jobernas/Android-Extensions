@@ -1,0 +1,55 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        // Apps and Modules
+        appID = 'eu.jobernas.demo'
+        appNameVersion = '1.0.0'
+        appCodeVersion = 1000
+
+        // Android Config
+        targetSDKVersion = 31  // Android 12
+        compileSDKVersion = 31 // Android 12
+        minSDKversion = 24     // Android 7
+        buildToolsVersion = '30.0.3'
+        testInstrumentationRunnerValue = 'androidx.test.runner.AndroidJUnitRunner'
+        javaVersion = JavaVersion.VERSION_11
+
+        // Modules
+        androidExtensionsNameVersion = '1.0.0'
+        androidExtensionsCodeVersion = 1000
+
+        // Plugins
+        gradlePluginVersion = '7.0.3'
+        kotlinPluginVersion = '1.5.31'
+
+        // Libs
+        coreVersion = "1.7.0"
+        appCompatVersion = "1.3.1"
+        materialVersion = "1.4.0"
+
+        // Unit Tests
+        junitVersion = "4.13.2"
+
+        // Instrumented Tests
+        testJunitVersion = "1.1.3"
+        testEspressoVersion = "3.4.0"
+    }
+
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
