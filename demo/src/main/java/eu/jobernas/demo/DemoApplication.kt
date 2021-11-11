@@ -2,7 +2,7 @@ package eu.jobernas.demo
 
 import android.app.Application
 import android.content.res.Configuration
-import eu.jobernas.extensions.ExtensionsWrapper
+import eu.jobernas.androidextensions.ExtensionsWrapper
 
 class DemoApplication: Application() {
 
