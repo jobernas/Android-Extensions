@@ -12,7 +12,7 @@ buildscript {
         minSDKversion = 24     // Android 7
         buildToolsVersion = '30.0.3'
         testInstrumentationRunnerValue = 'androidx.test.runner.AndroidJUnitRunner'
-        javaVersion = JavaVersion.VERSION_11
+        javaVersionValue = JavaVersion.VERSION_11
 
         // Modules
         androidExtensionsNameVersion = '1.0.0'
