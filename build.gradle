@@ -15,8 +15,8 @@ buildscript {
         javaVersionValue = JavaVersion.VERSION_11
 
         // Modules
-        androidExtensionsNameVersion = '1.0.0'
-        androidExtensionsCodeVersion = 1000
+        androidExtensionsNameVersion = project.androidExtensionsName
+        androidExtensionsCodeVersion = project.androidExtensionsBuild.toInteger()
 
         // Plugins
         gradlePluginVersion = '7.0.3'
