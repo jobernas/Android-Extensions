@@ -39,5 +39,5 @@ echo "Publish in Maven"
 echo ""
 echo "Add Tag and Commit All"
 git add -A && git commit -m "New Build for version ${moduleVersion} build number ${moduleBuild}"
-git tag moduleVersion
+git tag "${moduleVersion}"
 git push origin --tags
