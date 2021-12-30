@@ -50,7 +50,7 @@ afterEvaluate {
                 from components.release
                 group = 'eu.jobernas'
                 artifactId = 'androidextensions'
-                version = '1.0.1'
+                version = androidExtensionsNameVersion
             }
         }
     }
