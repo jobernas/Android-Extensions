@@ -10,6 +10,8 @@ Android Extensions to handle several components, since resources, context and ac
         - ContextExtensions - handles objects that need context to work.
     - v1.0.3
         - DrawableExtensions - handles Drawables Objects, tint method for example.
+    - v1.0.4
+        - LayoutParamsExtensions - handles ViewGroup.LayoutParams as Several Types ViewGroup.LayoutParams
 
 ## Contributors
 Any doubt about this project you should contact any of the following contributors:
