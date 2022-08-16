@@ -10,8 +10,6 @@ android {
     defaultConfig {
         minSdk minSDKversion
         targetSdk targetSDKVersion
-        versionCode androidExtensionsCodeVersion
-        versionName androidExtensionsNameVersion
 
         testInstrumentationRunner testInstrumentationRunnerValue
         consumerProguardFiles "consumer-rules.pro"
