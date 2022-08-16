@@ -14,6 +14,6 @@ class DemoApplication: Application() {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        ExtensionsWrapper.onConfigChanged(applicationContext)
+        ExtensionsWrapper.onConfigChanged(newConfig)
     }
 }

@@ -7,8 +7,8 @@ buildscript {
         appCodeVersion = 1000
 
         // Android Config
-        targetSDKVersion = 31  // Android 12
-        compileSDKVersion = 31 // Android 12
+        targetSDKVersion = 32  // Android 12
+        compileSDKVersion = 32 // Android 12
         minSDKversion = 24     // Android 7
         buildToolsVersion = '30.0.3'
         testInstrumentationRunnerValue = 'androidx.test.runner.AndroidJUnitRunner'

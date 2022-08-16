@@ -16,10 +16,10 @@ After this jitpack will be created and you can publish it to Maven.
         - DrawableExtensions - handles Drawables Objects, tint method for example.
     - v1.0.4
         - LayoutParamsExtensions - handles ViewGroup.LayoutParams as Several Types ViewGroup.LayoutParams;
-    - v1.0.5
-        - Several fixes in ExtensionsWrapper initialisation;
-    - v1.0.6
-        - Updated AndroidX Libraries versions to latest;
+    - v1.0.7
+         - Several fixes in ExtensionsWrapper initialisation;
+         - Updated AndroidX Libraries versions to latest;
+
 
 ## Contributors
 Any doubt about this project you should contact any of the following contributors:
