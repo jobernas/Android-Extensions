@@ -31,8 +31,8 @@ android {
 }
 
 dependencies {
-    implementation "androidx.core:core-ktx:$coreVersion"
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation "androidx.core:core-ktx:$androidxCoreVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$androidxConstraintLayoutVersion"
 
     // Unit Tests
     testImplementation "junit:junit:$junitVersion"

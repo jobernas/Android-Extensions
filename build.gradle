@@ -20,21 +20,23 @@ buildscript {
 
         // Plugins
         gradlePluginVersion = '7.2.1'
-        kotlinPluginVersion = '1.5.31'
+        kotlinPluginVersion = '1.7.10'
 
-        // Libs
-        coreVersion = "1.7.0"
-        appCompatVersion = "1.3.1"
-        materialVersion = "1.4.0"
+        // Libs Versions
+        androidxCoreVersion = '1.8.0'
+        androidxConstraintLayoutVersion = '2.1.4'
+
+        // Demo Versions
+        appCompatVersion = '1.5.0'
+        materialVersion = '1.6.1'
 
         // Unit Tests
-        junitVersion = "4.13.2"
+        junitVersion = '4.13.2'
 
         // Instrumented Tests
-        testJunitVersion = "1.1.3"
-        testEspressoVersion = "3.4.0"
+        testJunitVersion = '1.1.3'
+        testEspressoVersion = '3.4.0'
     }
-
 
     repositories {
         google()

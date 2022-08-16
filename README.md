@@ -1,6 +1,13 @@
 # Android-Extensions
 Android Extensions to handle several components, since resources, context and activity.
 
+## Publish Artifact
+In order to publish the artifact you need to run the following command:
+
+```shell
+$ ./gradlew publish
+```
+
 ## Changelog
     - v1.0.0
         - ExtensionsWrapper
