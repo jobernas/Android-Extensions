@@ -1,6 +1,7 @@
 package eu.jobernas.androidextensions
 
 import android.content.Context
+import android.content.res.Configuration
 import android.util.Log
 
 /**
@@ -52,20 +53,20 @@ class ExtensionsWrapper private constructor(
             get() = instance.fontDensity
 
         /**
-         * On Config Changed update Global Wrapper Configurations
+         * On config changed
          *
-         * @param context
+         * @param newConfig
          */
-        fun onConfigChanged(context: Context?) {
-            instance.updateDensities(context)
+        fun onConfigChanged(newConfig: Configuration?) {
+            instance.updateDensities(newConfig)
         }
     }
 
     /**
      * Private Methods
      **/
-    private fun updateDensities(context: Context?) {
-        density = context?.resources?.displayMetrics?.density ?: 1f
-        fontDensity = context?.resources?.displayMetrics?.scaledDensity ?: 1f
+    private fun updateDensities(newConfig: Configuration?) {
+        density = newConfig?.densityDpi?.toFloat() ?: density
+        fontDensity = newConfig?.fontScale ?: fontDensity
     }
 }
