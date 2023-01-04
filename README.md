@@ -1,6 +1,32 @@
 # Android-Extensions
 Android Extensions to handle several components, since resources, context and activity.
 
+## Install Guide
+Follow below step in order to configure Android Extensions module in your application.
+
+### Settings Gradle File
+In order to use this module in other projects you just need to add the following entry to your repositories settings:
+```groovy
+repositories {
+    //...
+    maven { url 'https://jitpack.io' }
+    //...
+}
+```
+
+### App Build Gradle File
+And after remember to add the dependency in your build.gradle file in app folder.
+```groovy
+dependencies {
+    // ...
+    // Android Extensions 
+    implementation "com.github.jobernas:Android-Extensions:${latestVersion}"
+
+    // ...   
+}
+```
+For more details check the following link [here](https://jitpack.io/#jobernas/Android-Extensions)
+
 ## Publish Artifact
 In order to publish the artifact you need to create a tag with the version and send it to git.
 After this jitpack will be created and you can publish it to Maven.
