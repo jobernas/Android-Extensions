@@ -129,19 +129,18 @@ fun Bitmap.convertPngToFile(context: Context?, name: String, parentFile: File? =
  * </provider>
  *
  * @param context
- * @param extension
  * @param folder
+ * @param extension
  * @param filePrefix
  * @return
  */
 @TargetApi(Build.VERSION_CODES.N)
 @Throws(Throwable::class)
-fun Bitmap.createTemporaryImage(context: Context, extension: String, folder: String? = null, filePrefix: String = "image"): Uri {
-	val folderFile = if (folder != null) context.createFolderIfNotExists(folder) else context.cacheDir
+fun Bitmap.createTemporaryImage(context: Context, folder: File, extension: String, filePrefix: String = "image"): Uri {
 	val imageName = "${filePrefix}_" + System.currentTimeMillis() + ".$extension"
 	val tmpFile = when(extension) {
-		"jpg" -> convertJpegToFile(context, imageName, folderFile)
-		"png" -> convertPngToFile(context, imageName, folderFile)
+		"jpg" -> convertJpegToFile(context, imageName, folder)
+		"png" -> convertPngToFile(context, imageName, folder)
 		else -> throw Throwable("Extension not recognized.")
 	}
 	return FileProvider.getUriForFile(context.applicationContext, "${context.applicationContext.packageName}.fileprovider", tmpFile)
@@ -151,13 +150,13 @@ fun Bitmap.createTemporaryImage(context: Context, extension: String, folder: Str
  * Copy to clipboard
  *
  * @param context
- * @param extension
  * @param folder
+ * @param extension
  * @param labelTitle
  */
-fun Bitmap.copyToClipboard(context: Context?, extension: String, labelTitle: String, folder: String? = null) {
+fun Bitmap.copyToClipboard(context: Context?, folder: File, extension: String, labelTitle: String) {
 	val contextNotNull = context ?: return
-	val imageTmpUri = this.createTemporaryImage(contextNotNull, extension, folder, labelTitle)
+	val imageTmpUri = this.createTemporaryImage(contextNotNull, folder, extension, labelTitle)
 	val clipData = ClipData.newUri(contextNotNull.contentResolver, labelTitle, imageTmpUri)
 	val clipboardManager: ClipboardManager? = contextNotNull.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
 	clipboardManager?.setPrimaryClip(clipData)

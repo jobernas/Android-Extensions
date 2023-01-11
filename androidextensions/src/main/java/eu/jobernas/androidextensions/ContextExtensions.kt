@@ -95,12 +95,13 @@ fun Context.pastImageFromClipboard(itemAt: Int = 0): Uri? {
 }
 
 /**
- * Create Folder inside a location folder
+ * Create folder if not exists
  *
  * @param folderName
+ * @param parentFile
  * @return
  */
-fun Context.createFolderIfNotExists(folderName: String, parentFile: File = cacheDir): File {
+fun Context.createFolderIfNotExists(folderName: String, parentFile: File): File {
         val folder = File(parentFile, folderName)
         if (!folder.exists())
                 folder.mkdirs()
